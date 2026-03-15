@@ -1,20 +1,28 @@
 package app;
 
+import model.EstudianteLicenciatura;
+import model.EstudiantePosgrado;
 import model.Estudiante;
 
 public class Main {
+
     public static void main(String[] args) {
-        Estudiante estudiante1 = new Estudiante("Luis Chaires", "A123", 85);
-        Estudiante estudiante2 = new Estudiante("Ana Lopez", "B456", 65);
-System.out.println("=== model.Estudiante 1 ===");
-estudiante1.mostrarInformacion();
-System.out.println("¿Aprobo?: " + estudiante1.aprobo());
 
-System.out.println();
+        EstudianteLicenciatura estudiante1 =
+                new EstudianteLicenciatura("Luis Chaires", "A123", 85, "Ingeniería en Sistemas");
 
-System.out.println("===model.Estudiante 2 ===");
-estudiante2.mostrarInformacion();
-System.out.println("¿Aprobo?: " + estudiante2.aprobo());
-;
+        EstudiantePosgrado estudiante2 =
+                new EstudiantePosgrado("Ana Lopez", "B456", 92, "Inteligencia Artificial");
+
+
+        System.out.println("=== Estudiante de Licenciatura ===");
+        estudiante1.mostrarInformacion();
+        System.out.println("¿Aprobó?: " + estudiante1.aprobo());
+
+        System.out.println();
+
+        System.out.println("=== Estudiante de Posgrado ===");
+        estudiante2.mostrarInformacion();
+        System.out.println("¿Aprobó?: " + estudiante2.aprobo());
     }
 }
